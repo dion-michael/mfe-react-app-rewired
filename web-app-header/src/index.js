@@ -12,7 +12,9 @@ window.renderHeader = (containerId, history) => {
 };
 
 window.unmountHeader = containerId => {
-  ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+  if (document.getElementById(containerId)) {
+    ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+  }
 };
 
 if (!document.getElementById('Header-container')) {

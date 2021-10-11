@@ -12,13 +12,13 @@ function App() {
       {
         arrBlogs.map((blog, index) => {
           return (
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-5">
+            <div key={index} className="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-5">
               <div className="card">
                 <Link to={{pathname: `/blogdetail/${blog.blogID}`, id: blog.blogID, item: blog}} >
-                  <div class="card-body">
-                    <h5 class="card-title">{`#${blog.blogID}`}</h5>
-                    <p class="card-text">{blog.blogName}</p>
-                    <p class="card-text">{blog.blogDetail}</p>
+                  <div className="card-body">
+                    <h5 className="card-title">{`#${blog.blogID}`}</h5>
+                    <p className="card-text">{blog.blogName}</p>
+                    <p className="card-text">{blog.blogDetail}</p>
                   </div>
                 </Link>
               </div>

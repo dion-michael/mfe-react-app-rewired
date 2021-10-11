@@ -11,7 +11,9 @@ window.renderBlogs = (containerId, history) => {
 };
 
 window.unmountBlogs = containerId => {
-  ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+  if (document.getElementById(containerId)) {
+    ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+  }
 };
 
 if (!document.getElementById('Blogs-container')) {
